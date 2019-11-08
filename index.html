@@ -9,6 +9,8 @@ var ballX = 50;
 var ballY = 50;
 var ballSpeedX = 6;
 var ballSpeedY = 3;
+var ballSpeedXReset = 6;
+var ballSpeedYReset = 3;
 
 var player1Score = 0;
 var player2Score = 0;
@@ -64,10 +66,16 @@ function ballReset() {
 		player2Score >= WINNING_SCORE) {
 
 		showingWinScreen = true;
-
 	}
-
-	ballSpeedX = -ballSpeedX;
+	if(ballSpeedX>ballSpeedXReset)
+	{
+		ballSpeedX = -ballSpeedXReset;
+	}
+	if(ballSpeedX<-ballSpeedXReset)
+	{
+		ballSpeedX=ballSpeedXReset;
+	}
+	//ballSpeedX = -ballSpeedX;
 	ballX = canvas.width/2;
 	ballY = canvas.height/2;
 }
