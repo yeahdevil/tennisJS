@@ -67,23 +67,9 @@ function ballReset() {
 
 		showingWinScreen = true;
 	}
-	if(ballSpeedX>ballSpeedXReset)
-	{
-		ballSpeedX = -ballSpeedXReset;
-	}
-	if(ballSpeedX<-ballSpeedXReset)
-	{
-		ballSpeedX=ballSpeedXReset;
-	}
-	if(ballSpeedY>ballSpeedYReset)
-	{
-		ballSpeedX = -ballSpeedXReset;
-	}
-	if(ballSpeedY<-ballSpeedYReset)
-	{
-		ballSpeedX=ballSpeedXReset;
-	}
-	//ballSpeedX = -ballSpeedX;
+	
+	
+	ballSpeedX = -ballSpeedX;
 	ballX = canvas.width/2;
 	ballY = canvas.height/2;
 }
