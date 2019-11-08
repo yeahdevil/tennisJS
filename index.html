@@ -12,7 +12,7 @@ var ballSpeedY = 2;
 
 var player1Score = 0;
 var player2Score = 0;
-const WINNING_SCORE = 3;
+const WINNING_SCORE = 10;
 
 var showingWinScreen = false;
 
@@ -98,7 +98,7 @@ function moveEverything() {
 
 			var deltaY = ballY
 					-(paddle1Y+PADDLE_HEIGHT/2);
-			ballSpeedY = deltaY * 0.35;
+			ballSpeedY = deltaY * 0.25;
 		} else {
 			player2Score++; // must be BEFORE ballReset()
 			ballReset();
@@ -111,7 +111,7 @@ function moveEverything() {
 
 			var deltaY = ballY
 					-(paddle2Y+PADDLE_HEIGHT/2);
-			ballSpeedY = deltaY * 0.35;
+			ballSpeedY = deltaY * 0.25;
 		} else {
 			player1Score++; // must be BEFORE ballReset()
 			ballReset();	
